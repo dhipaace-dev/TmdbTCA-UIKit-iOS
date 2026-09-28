@@ -11,36 +11,38 @@ import domain
 import app_framework
 
 @Reducer
-struct MoviesByGenreFeature {
+public struct MoviesByGenreFeature {
+    
+    public init() {}
     
     @ObservableState
-    struct State: Equatable {
+    public struct State: Equatable {
         var genreId: Int
         var movies: [Movie] = []
         var page = 0
         var isLoading = false
         var errorMessage: String?
         
-        init(genreId: Int) {
+        public init(genreId: Int) {
             self.genreId = genreId
         }
     }
     
-    enum Action {
+    public enum Action {
         case onAppear
         case movieTapped(Movie)
         case loadMoreIfNeeded(currentMovie: Movie)
         case moviesResponse(nextPage: Int, Result<DiscoverMovieByGenreModel, AppError>)
         case delegate(Delegate)
         
-        enum Delegate {
+        public enum Delegate {
             case movieSelected(Movie)
         }
     }
     
     @Dependency(\.getMovieByGenreUseCase) var getMovieByGenreUseCase
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onAppear:
