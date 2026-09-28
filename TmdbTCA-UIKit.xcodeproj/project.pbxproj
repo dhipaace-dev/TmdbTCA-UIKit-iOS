@@ -30,6 +30,8 @@
 		9F01A568306A456900A18A16 /* feature_movie_review.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A54D306A44D400A18A16 /* feature_movie_review.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F01A5AB306A480000A18A16 /* feature_movie_trailer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A593306A478300A18A16 /* feature_movie_trailer.framework */; };
 		9F01A5AC306A480000A18A16 /* feature_movie_trailer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A593306A478300A18A16 /* feature_movie_trailer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F01A5E7306A4CD000A18A16 /* feature_splash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A5D7306A4C7200A18A16 /* feature_splash.framework */; };
+		9F01A5E8306A4CD000A18A16 /* feature_splash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A5D7306A4C7200A18A16 /* feature_splash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30212F30287BBA00578C9B /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,13 @@
 			remoteGlobalIDString = 9F01A573306A478200A18A16;
 			remoteInfo = feature_movie_trailer;
 		};
+		9F01A5D6306A4C7200A18A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F01A5D1306A4C7100A18A16 /* feature_splash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9F01A5B7306A4C7100A18A16;
+			remoteInfo = feature_splash;
+		};
 		9F3020AE30287AB400578C9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9F30208F30287AB300578C9B /* Project object */;
@@ -118,6 +127,7 @@
 				9F01A568306A456900A18A16 /* feature_movie_review.framework in Embed Frameworks */,
 				9F01A4DE306A3F2800A18A16 /* feature_movie_by_genre.framework in Embed Frameworks */,
 				9F01A41D306A145C00A18A16 /* data.framework in Embed Frameworks */,
+				9F01A5E8306A4CD000A18A16 /* feature_splash.framework in Embed Frameworks */,
 				9F01A376306A061700A18A16 /* domain.framework in Embed Frameworks */,
 				9F01A492306A22E300A18A16 /* feature_genre.framework in Embed Frameworks */,
 				9F01A522306A425E00A18A16 /* feature_movie_details.framework in Embed Frameworks */,
@@ -136,6 +146,7 @@
 		9F01A503306A41C700A18A16 /* feature_movie_details.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = feature_movie_details.xcodeproj; path = feature_movie_details/feature_movie_details.xcodeproj; sourceTree = "<group>"; };
 		9F01A547306A44D300A18A16 /* feature_movie_review.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = feature_movie_review.xcodeproj; path = feature_movie_review/feature_movie_review.xcodeproj; sourceTree = "<group>"; };
 		9F01A58D306A478300A18A16 /* feature_movie_trailer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = feature_movie_trailer.xcodeproj; path = feature_movie_trailer/feature_movie_trailer.xcodeproj; sourceTree = "<group>"; };
+		9F01A5D1306A4C7100A18A16 /* feature_splash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = feature_splash.xcodeproj; path = feature_splash/feature_splash.xcodeproj; sourceTree = "<group>"; };
 		9F30209730287AB300578C9B /* TmdbTCA-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TmdbTCA-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3020AD30287AB400578C9B /* TmdbTCA-UIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TmdbTCA-UIKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3020B730287AB400578C9B /* TmdbTCA-UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TmdbTCA-UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +197,7 @@
 				9F01A4DD306A3F2800A18A16 /* feature_movie_by_genre.framework in Frameworks */,
 				9F01A450306A1B9B00A18A16 /* Dependencies in Frameworks */,
 				9F01A5AB306A480000A18A16 /* feature_movie_trailer.framework in Frameworks */,
+				9F01A5E7306A4CD000A18A16 /* feature_splash.framework in Frameworks */,
 				9F01A491306A22E300A18A16 /* feature_genre.framework in Frameworks */,
 				9F01A446306A1B2800A18A16 /* Collections in Frameworks */,
 				9F01A442306A1B2800A18A16 /* BasicContainers in Frameworks */,
@@ -247,6 +259,7 @@
 		9F01A454306A224800A18A16 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				9F01A5D1306A4C7100A18A16 /* feature_splash.xcodeproj */,
 				9F01A58D306A478300A18A16 /* feature_movie_trailer.xcodeproj */,
 				9F01A547306A44D300A18A16 /* feature_movie_review.xcodeproj */,
 				9F01A503306A41C700A18A16 /* feature_movie_details.xcodeproj */,
@@ -292,6 +305,14 @@
 			isa = PBXGroup;
 			children = (
 				9F01A593306A478300A18A16 /* feature_movie_trailer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F01A5D2306A4C7100A18A16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F01A5D7306A4C7200A18A16 /* feature_splash.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -475,6 +496,10 @@
 					ProductGroup = 9F01A58E306A478300A18A16 /* Products */;
 					ProjectRef = 9F01A58D306A478300A18A16 /* feature_movie_trailer.xcodeproj */;
 				},
+				{
+					ProductGroup = 9F01A5D2306A4C7100A18A16 /* Products */;
+					ProjectRef = 9F01A5D1306A4C7100A18A16 /* feature_splash.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -540,6 +565,13 @@
 			fileType = wrapper.framework;
 			path = feature_movie_trailer.framework;
 			remoteRef = 9F01A592306A478300A18A16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F01A5D7306A4C7200A18A16 /* feature_splash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = feature_splash.framework;
+			remoteRef = 9F01A5D6306A4C7200A18A16 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

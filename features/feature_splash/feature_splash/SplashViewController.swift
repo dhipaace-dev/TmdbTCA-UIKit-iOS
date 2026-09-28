@@ -8,10 +8,10 @@
 import ComposableArchitecture
 import UIKit
 
-final class SplashViewController: UIViewController {
+public final class SplashViewController: UIViewController {
     private var store: StoreOf<SplashFeature>
     
-    init(store: StoreOf<SplashFeature>) {
+    public init(store: StoreOf<SplashFeature>) {
         self.store = store
         super.init(nibName: nil, bundle: nil)
     }
@@ -20,7 +20,7 @@ final class SplashViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
@@ -36,7 +36,7 @@ final class SplashViewController: UIViewController {
         ])
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         store.send(.onAppeer)
     }

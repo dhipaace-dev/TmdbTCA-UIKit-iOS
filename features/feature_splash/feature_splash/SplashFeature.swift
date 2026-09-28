@@ -9,23 +9,28 @@ import ComposableArchitecture
 import Foundation
 
 @Reducer
-struct SplashFeature {
-    @ObservableState
-    struct State: Equatable {}
+public struct SplashFeature {
     
-    enum Action {
+    public init() {}
+    
+    @ObservableState
+    public struct State: Equatable {
+        public init() {}
+    }
+    
+    public enum Action {
         case onAppeer
         case finished
         case delegate(Delegate)
         
-        enum Delegate {
+        public enum Delegate {
             case didFinish
         }
     }
     
     @Dependency(\.continuousClock) var clock
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onAppeer:
