@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import domain
 
 final class ReviewCell: UITableViewCell {
     static let reuseIdentifier = "ReviewCell"

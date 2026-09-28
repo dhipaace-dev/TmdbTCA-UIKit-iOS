@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import domain
 
 final class MovieCell: UITableViewCell {
     static let reuseIdentifier = "MovieCell"
