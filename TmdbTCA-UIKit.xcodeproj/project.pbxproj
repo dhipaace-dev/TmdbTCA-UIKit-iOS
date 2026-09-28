@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9F01A375306A061700A18A16 /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A342306A059200A18A16 /* domain.framework */; };
 		9F01A376306A061700A18A16 /* domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A342306A059200A18A16 /* domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F01A3D0306A0E1900A18A16 /* data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A3A2306A084C00A18A16 /* data.framework */; };
+		9F01A3D1306A0E1900A18A16 /* data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A3A2306A084C00A18A16 /* data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30212F30287BBA00578C9B /* ComposableArchitecture */; };
 		9F30213330287BCB00578C9B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30213230287BCB00578C9B /* Alamofire */; };
 		9F30213630287BE800578C9B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30213530287BE800578C9B /* SwiftyJSON */; };
@@ -21,6 +23,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9F01A322306A059100A18A16;
 			remoteInfo = domain;
+		};
+		9F01A3A1306A084C00A18A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F01A39C306A084C00A18A16 /* data.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9F01A382306A084B00A18A16;
+			remoteInfo = data;
 		};
 		9F3020AE30287AB400578C9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -45,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9F01A3D1306A0E1900A18A16 /* data.framework in Embed Frameworks */,
 				9F01A376306A061700A18A16 /* domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -54,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		9F01A33C306A059200A18A16 /* domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = domain.xcodeproj; path = domain/domain.xcodeproj; sourceTree = "<group>"; };
+		9F01A39C306A084C00A18A16 /* data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = data.xcodeproj; path = data/data.xcodeproj; sourceTree = "<group>"; };
 		9F30209730287AB300578C9B /* TmdbTCA-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TmdbTCA-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3020AD30287AB400578C9B /* TmdbTCA-UIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TmdbTCA-UIKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3020B730287AB400578C9B /* TmdbTCA-UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TmdbTCA-UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +108,7 @@
 			files = (
 				9F01A375306A061700A18A16 /* domain.framework in Frameworks */,
 				9F30213630287BE800578C9B /* SwiftyJSON in Frameworks */,
+				9F01A3D0306A0E1900A18A16 /* data.framework in Frameworks */,
 				9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */,
 				9F30213330287BCB00578C9B /* Alamofire in Frameworks */,
 			);
@@ -134,9 +146,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9F01A39D306A084C00A18A16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F01A3A2306A084C00A18A16 /* data.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9F30208E30287AB300578C9B = {
 			isa = PBXGroup;
 			children = (
+				9F01A39C306A084C00A18A16 /* data.xcodeproj */,
 				9F01A33C306A059200A18A16 /* domain.xcodeproj */,
 				9F30209930287AB300578C9B /* TmdbTCA-UIKit */,
 				9F3020B030287AB400578C9B /* TmdbTCA-UIKitTests */,
@@ -273,6 +294,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 9F01A39D306A084C00A18A16 /* Products */;
+					ProjectRef = 9F01A39C306A084C00A18A16 /* data.xcodeproj */;
+				},
+				{
 					ProductGroup = 9F01A33D306A059200A18A16 /* Products */;
 					ProjectRef = 9F01A33C306A059200A18A16 /* domain.xcodeproj */;
 				},
@@ -292,6 +317,13 @@
 			fileType = wrapper.framework;
 			path = domain.framework;
 			remoteRef = 9F01A341306A059200A18A16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F01A3A2306A084C00A18A16 /* data.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = data.framework;
+			remoteRef = 9F01A3A1306A084C00A18A16 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

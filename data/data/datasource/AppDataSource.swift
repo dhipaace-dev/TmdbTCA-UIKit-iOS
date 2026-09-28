@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AppDataSource {
+public protocol AppDataSource {
     func fetchMovieGenre() async throws -> GenreResponse
     func fetchMovieByGenre(genreId: String, page: Int) async throws -> DiscoverMovieByGenreResponse
     func fetchMovieDetail(movieId: Int) async throws -> MovieDetailsResponse
