@@ -9,7 +9,7 @@ import ComposableArchitecture
 import UIKit
 import WebKit
 
-final class MovieTrailerViewController: UIViewController {
+public final class MovieTrailerViewController: UIViewController {
     private let store: StoreOf<MovieTrailerFeature>
     private var observationToken: ObservationToken?
     
@@ -17,7 +17,7 @@ final class MovieTrailerViewController: UIViewController {
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     private var loadedKey: String?
     
-    init(store: StoreOf<MovieTrailerFeature>) {
+    public init(store: StoreOf<MovieTrailerFeature>) {
         self.store = store
         super.init(nibName: nil, bundle: nil)
     }
@@ -26,7 +26,7 @@ final class MovieTrailerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Trailer"
         
@@ -53,7 +53,7 @@ final class MovieTrailerViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.send(.onAppear)
     }
