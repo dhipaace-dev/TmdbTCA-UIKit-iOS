@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import Foundation
+import feature_genre
 
 @Reducer
 struct AppFeature {

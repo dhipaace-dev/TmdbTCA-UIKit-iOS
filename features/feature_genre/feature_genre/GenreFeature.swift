@@ -8,31 +8,36 @@
 import ComposableArchitecture
 import Foundation
 import domain
+import app_framework
 
 @Reducer
-struct GenreFeature {
+public struct GenreFeature {
+    
+    public init() {}
     
     @ObservableState
-    struct State: Equatable {
+    public struct State: Equatable {
         var genres: [Genre] = []
         var isLoading = false
         var errorMessage: String?
+        
+        public init() {}
     }
     
-    enum Action {
+    public enum Action {
         case onAppear
         case genreResponse(Result<GenreModel, AppError>)
         case genreTapped(Genre)
         case delegate(Delegate)
         
-        enum Delegate: Equatable {
+        public enum Delegate: Equatable {
             case genreSelected(Genre)
         }
     }
     
     @Dependency(\.getMovieGenreUseCase) var getMovieGenreUseCase
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onAppear:
@@ -57,8 +62,4 @@ struct GenreFeature {
             }
         }
     }
-}
-
-func toAppError(_ error: any Error) -> AppError {
-    (error as? AppError) ?? .networkError(message: error.localizedDescription)
 }

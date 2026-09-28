@@ -20,6 +20,8 @@
 		9F01A44A306A1B2800A18A16 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A449306A1B2800A18A16 /* DequeModule */; };
 		9F01A450306A1B9B00A18A16 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A44F306A1B9B00A18A16 /* Dependencies */; };
 		9F01A453306A1BAE00A18A16 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A452306A1BAE00A18A16 /* CasePaths */; };
+		9F01A491306A22E300A18A16 /* feature_genre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A47F306A227F00A18A16 /* feature_genre.framework */; };
+		9F01A492306A22E300A18A16 /* feature_genre.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A47F306A227F00A18A16 /* feature_genre.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30212F30287BBA00578C9B /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9F01A3DC306A11FC00A18A16;
 			remoteInfo = app_framework;
+		};
+		9F01A47E306A227F00A18A16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F01A479306A227E00A18A16 /* feature_genre.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9F01A45F306A227E00A18A16;
+			remoteInfo = feature_genre;
 		};
 		9F3020AE30287AB400578C9B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -71,6 +80,7 @@
 				9F01A415306A125E00A18A16 /* app_framework.framework in Embed Frameworks */,
 				9F01A41D306A145C00A18A16 /* data.framework in Embed Frameworks */,
 				9F01A376306A061700A18A16 /* domain.framework in Embed Frameworks */,
+				9F01A492306A22E300A18A16 /* feature_genre.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +91,7 @@
 		9F01A33C306A059200A18A16 /* domain.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = domain.xcodeproj; path = domain/domain.xcodeproj; sourceTree = "<group>"; };
 		9F01A39C306A084C00A18A16 /* data.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = data.xcodeproj; path = data/data.xcodeproj; sourceTree = "<group>"; };
 		9F01A3F6306A11FC00A18A16 /* app_framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = app_framework.xcodeproj; path = app_framework/app_framework.xcodeproj; sourceTree = "<group>"; };
+		9F01A479306A227E00A18A16 /* feature_genre.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = feature_genre.xcodeproj; path = feature_genre/feature_genre.xcodeproj; sourceTree = "<group>"; };
 		9F30209730287AB300578C9B /* TmdbTCA-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TmdbTCA-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3020AD30287AB400578C9B /* TmdbTCA-UIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TmdbTCA-UIKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3020B730287AB400578C9B /* TmdbTCA-UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TmdbTCA-UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +140,7 @@
 				9F01A444306A1B2800A18A16 /* BitCollections in Frameworks */,
 				9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */,
 				9F01A450306A1B9B00A18A16 /* Dependencies in Frameworks */,
+				9F01A491306A22E300A18A16 /* feature_genre.framework in Frameworks */,
 				9F01A446306A1B2800A18A16 /* Collections in Frameworks */,
 				9F01A442306A1B2800A18A16 /* BasicContainers in Frameworks */,
 				9F01A448306A1B2800A18A16 /* ContainersPreview in Frameworks */,
@@ -184,9 +196,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9F01A454306A224800A18A16 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				9F01A479306A227E00A18A16 /* feature_genre.xcodeproj */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		9F01A47A306A227E00A18A16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F01A47F306A227F00A18A16 /* feature_genre.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9F30208E30287AB300578C9B = {
 			isa = PBXGroup;
 			children = (
+				9F01A454306A224800A18A16 /* features */,
 				9F01A3F6306A11FC00A18A16 /* app_framework.xcodeproj */,
 				9F01A39C306A084C00A18A16 /* data.xcodeproj */,
 				9F01A33C306A059200A18A16 /* domain.xcodeproj */,
@@ -342,6 +371,10 @@
 					ProductGroup = 9F01A33D306A059200A18A16 /* Products */;
 					ProjectRef = 9F01A33C306A059200A18A16 /* domain.xcodeproj */;
 				},
+				{
+					ProductGroup = 9F01A47A306A227E00A18A16 /* Products */;
+					ProjectRef = 9F01A479306A227E00A18A16 /* feature_genre.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -372,6 +405,13 @@
 			fileType = wrapper.framework;
 			path = app_framework.framework;
 			remoteRef = 9F01A3FB306A11FD00A18A16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F01A47F306A227F00A18A16 /* feature_genre.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = feature_genre.framework;
+			remoteRef = 9F01A47E306A227F00A18A16 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

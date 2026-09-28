@@ -6,4 +6,8 @@
 //
 
 import Foundation
+import domain
 
+public func toAppError(_ error: any Error) -> AppError {
+    (error as? AppError) ?? .networkError(message: error.localizedDescription)
+}

@@ -9,14 +9,14 @@ import ComposableArchitecture
 import UIKit
 import app_framework
 
-final class GenreViewController: UITableViewController {
+public final class GenreViewController: UITableViewController {
     private let store: StoreOf<GenreFeature>
     private var observationToken: ObservationToken?
     private let overlay = LoadingOverlayView()
     
     private static let cellReuseIdentifier = "GenreCell"
     
-    init(store: StoreOf<GenreFeature>) {
+    public init(store: StoreOf<GenreFeature>) {
         self.store = store
         super.init(style: .plain)
     }
@@ -25,7 +25,7 @@ final class GenreViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Genres"
         
@@ -44,16 +44,16 @@ final class GenreViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.send(.onAppear)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         store.genres.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Self.cellReuseIdentifier, for: indexPath)
         let genre = store.genres[indexPath.row]
         
@@ -67,12 +67,12 @@ final class GenreViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         cell.contentView.frame = cell.contentView.frame.insetBy(dx: 4, dy: 4)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         store.send(.genreTapped(store.genres[indexPath.row]))
     }

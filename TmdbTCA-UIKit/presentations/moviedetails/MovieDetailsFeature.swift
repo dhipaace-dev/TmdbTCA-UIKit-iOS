@@ -8,6 +8,7 @@
 import ComposableArchitecture
 import Foundation
 import domain
+import app_framework
 
 @Reducer
 struct MovieDetailsFeature {

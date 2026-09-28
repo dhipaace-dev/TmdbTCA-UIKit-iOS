@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import UIKit
+import feature_genre
 
 final class AppCoordinator: UINavigationController, UINavigationControllerDelegate {
     private let store: StoreOf<AppFeature>
