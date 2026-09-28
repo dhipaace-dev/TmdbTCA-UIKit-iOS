@@ -11,28 +11,30 @@ import domain
 import app_framework
 
 @Reducer
-struct MovieDetailsFeature {
+public struct MovieDetailsFeature {
+    
+    public init() {}
     
     @ObservableState
-    struct State: Equatable {
+    public struct State: Equatable {
         var movieId: Int
         var movie: MovieDetailsModel?
         var isLoading = false
         var errorMessage: String?
         
-        init(movieId: Int) {
+        public init(movieId: Int) {
             self.movieId = movieId
         }
     }
     
-    enum Action {
+    public enum Action {
         case onAppear
         case detailsResponse(Result<MovieDetailsModel, AppError>)
         case showReviewsTapped
         case showTrailerTapped
         case delegate(Delegate)
         
-        enum Delegate: Equatable {
+        public enum Delegate: Equatable {
             case showReviews(movieId: Int)
             case showTrailer(movieId: Int)
         }
@@ -40,7 +42,7 @@ struct MovieDetailsFeature {
     
     @Dependency(\.getMovieDetailsUseCase) var getMovieDetailsUseCase
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onAppear:

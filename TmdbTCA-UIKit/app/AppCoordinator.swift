@@ -9,6 +9,7 @@ import ComposableArchitecture
 import UIKit
 import feature_genre
 import feature_movie_by_genre
+import feature_movie_details
 
 final class AppCoordinator: UINavigationController, UINavigationControllerDelegate {
     private let store: StoreOf<AppFeature>

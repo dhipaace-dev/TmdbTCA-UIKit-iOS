@@ -9,7 +9,7 @@ import ComposableArchitecture
 import UIKit
 import app_framework
 
-final class MovieDetailsViewController: UIViewController {
+public final class MovieDetailsViewController: UIViewController {
     private let store: StoreOf<MovieDetailsFeature>
     private var observationToken: ObservationToken?
     private let overlay = LoadingOverlayView()
@@ -20,7 +20,7 @@ final class MovieDetailsViewController: UIViewController {
     private let reviewsButton = UIButton(type: .system)
     private let trailerButton = UIButton(type: .system)
     
-    init(store: StoreOf<MovieDetailsFeature>) {
+    public init(store: StoreOf<MovieDetailsFeature>) {
         self.store = store
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,7 +29,7 @@ final class MovieDetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Details"
         view.backgroundColor = .systemBackground
@@ -43,7 +43,7 @@ final class MovieDetailsViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.send(.onAppear)
     }

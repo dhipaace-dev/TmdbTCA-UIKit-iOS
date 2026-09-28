@@ -9,6 +9,7 @@ import ComposableArchitecture
 import Foundation
 import feature_genre
 import feature_movie_by_genre
+import feature_movie_details
 
 @Reducer
 struct AppFeature {
