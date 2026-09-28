@@ -8,7 +8,7 @@
 import UIKit
 
 @MainActor
-final class RemoteImageLoader {
+public final class RemoteImageLoader {
     static let shared = RemoteImageLoader()
     
     private let cache = NSCache<NSString, UIImage>()
@@ -35,7 +35,7 @@ final class RemoteImageLoader {
     }
 }
 
-extension UIImageView {
+public extension UIImageView {
     private static var lastURLKey: UInt8 = 0
     private static var loadTokenKey: UInt8 = 0
     

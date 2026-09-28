@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import UIKit
+import app_framework
 
 final class MovieDetailsViewController: UIViewController {
     private let store: StoreOf<MovieDetailsFeature>

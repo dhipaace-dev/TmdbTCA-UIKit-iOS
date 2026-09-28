@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import UIKit
+import app_framework
 
 final class GenreViewController: UITableViewController {
     private let store: StoreOf<GenreFeature>

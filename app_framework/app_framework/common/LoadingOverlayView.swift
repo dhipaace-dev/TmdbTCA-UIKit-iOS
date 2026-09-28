@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LoadingOverlayView: UIView {
+public final class LoadingOverlayView: UIView {
     
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     private let errorLabel = UILabel()
@@ -42,7 +42,7 @@ final class LoadingOverlayView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(isLoading: Bool, errorMessage: String?) {
+    public func update(isLoading: Bool, errorMessage: String?) {
         if isLoading {
             activityIndicator.startAnimating()
         } else {

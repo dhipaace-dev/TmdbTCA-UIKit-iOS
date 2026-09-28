@@ -9,6 +9,7 @@ import ComposableArchitecture
 import Foundation
 import domain
 import data
+import app_framework
 
 enum AppEnvironment {
     static let apiClient = ApiClient()

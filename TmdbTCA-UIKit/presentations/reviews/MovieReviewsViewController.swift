@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import UIKit
+import app_framework
 
 final class MovieReviewsViewController: UITableViewController {
     private let store: StoreOf<MovieReviewsFeature>
