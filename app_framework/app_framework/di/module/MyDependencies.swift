@@ -9,7 +9,6 @@ import ComposableArchitecture
 import Foundation
 import domain
 import data
-import app_framework
 
 enum AppEnvironment {
     static let apiClient = ApiClient()
@@ -17,27 +16,27 @@ enum AppEnvironment {
     static let repository: AppRepository = AppRepositoryImpl(appDataSource: dataSource)
 }
 
-private enum GetMovieGenreUseCaseKey: DependencyKey {
-    static let liveValue: GetMovieGenreUseCase = GetMovieGenreUseCaseImpl(appRepository: AppEnvironment.repository)
+public enum GetMovieGenreUseCaseKey: DependencyKey {
+    public static let liveValue: GetMovieGenreUseCase = GetMovieGenreUseCaseImpl(appRepository: AppEnvironment.repository)
 }
 
-private enum GetMovieByGenreUseCaseKey: DependencyKey {
-    static let liveValue: GetMovieByGenreUseCase = GetMovieByGenreUseCaseImpl(appRepository: AppEnvironment.repository)
+public enum GetMovieByGenreUseCaseKey: DependencyKey {
+    public static let liveValue: GetMovieByGenreUseCase = GetMovieByGenreUseCaseImpl(appRepository: AppEnvironment.repository)
 }
 
-private enum GetMovieDetailsUseCaseKey: DependencyKey {
-    static let liveValue: GetMovieDetailsUseCase = GetMovieDetailsUseCaseImpl(appRepository: AppEnvironment.repository)
+public enum GetMovieDetailsUseCaseKey: DependencyKey {
+    public static let liveValue: GetMovieDetailsUseCase = GetMovieDetailsUseCaseImpl(appRepository: AppEnvironment.repository)
 }
 
-private enum GetMovieReviewUseCaseKey: DependencyKey {
-    static let liveValue: GetMovieReviewUseCase = GetMovieReviewUseCaseImpl(appRepository: AppEnvironment.repository)
+public enum GetMovieReviewUseCaseKey: DependencyKey {
+    public static let liveValue: GetMovieReviewUseCase = GetMovieReviewUseCaseImpl(appRepository: AppEnvironment.repository)
 }
 
-private enum GetMovieTrailerUseCaseKey: DependencyKey {
-    static let liveValue: GetMovieTrailerUseCase = GetMovieTrailerUseCaseImpl(appRepository: AppEnvironment.repository)
+public enum GetMovieTrailerUseCaseKey: DependencyKey {
+    public static let liveValue: GetMovieTrailerUseCase = GetMovieTrailerUseCaseImpl(appRepository: AppEnvironment.repository)
 }
 
-extension DependencyValues {
+public extension DependencyValues {
     var getMovieGenreUseCase: GetMovieGenreUseCase {
         get { self[GetMovieGenreUseCaseKey.self] }
         set { self[GetMovieGenreUseCaseKey.self] = newValue }

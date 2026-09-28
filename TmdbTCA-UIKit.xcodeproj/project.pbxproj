@@ -13,6 +13,13 @@
 		9F01A415306A125E00A18A16 /* app_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A3FC306A11FD00A18A16 /* app_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F01A41C306A145C00A18A16 /* data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A3A2306A084C00A18A16 /* data.framework */; };
 		9F01A41D306A145C00A18A16 /* data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A3A2306A084C00A18A16 /* data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F01A442306A1B2800A18A16 /* BasicContainers in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A441306A1B2800A18A16 /* BasicContainers */; };
+		9F01A444306A1B2800A18A16 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A443306A1B2800A18A16 /* BitCollections */; };
+		9F01A446306A1B2800A18A16 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A445306A1B2800A18A16 /* Collections */; };
+		9F01A448306A1B2800A18A16 /* ContainersPreview in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A447306A1B2800A18A16 /* ContainersPreview */; };
+		9F01A44A306A1B2800A18A16 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A449306A1B2800A18A16 /* DequeModule */; };
+		9F01A450306A1B9B00A18A16 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A44F306A1B9B00A18A16 /* Dependencies */; };
+		9F01A453306A1BAE00A18A16 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A452306A1BAE00A18A16 /* CasePaths */; };
 		9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9F30212F30287BBA00578C9B /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -116,9 +123,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F01A41C306A145C00A18A16 /* data.framework in Frameworks */,
+				9F01A453306A1BAE00A18A16 /* CasePaths in Frameworks */,
 				9F01A375306A061700A18A16 /* domain.framework in Frameworks */,
 				9F01A414306A125E00A18A16 /* app_framework.framework in Frameworks */,
+				9F01A444306A1B2800A18A16 /* BitCollections in Frameworks */,
 				9F30213030287BBA00578C9B /* ComposableArchitecture in Frameworks */,
+				9F01A450306A1B9B00A18A16 /* Dependencies in Frameworks */,
+				9F01A446306A1B2800A18A16 /* Collections in Frameworks */,
+				9F01A442306A1B2800A18A16 /* BasicContainers in Frameworks */,
+				9F01A448306A1B2800A18A16 /* ContainersPreview in Frameworks */,
+				9F01A44A306A1B2800A18A16 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +230,13 @@
 			name = "TmdbTCA-UIKit";
 			packageProductDependencies = (
 				9F30212F30287BBA00578C9B /* ComposableArchitecture */,
+				9F01A441306A1B2800A18A16 /* BasicContainers */,
+				9F01A443306A1B2800A18A16 /* BitCollections */,
+				9F01A445306A1B2800A18A16 /* Collections */,
+				9F01A447306A1B2800A18A16 /* ContainersPreview */,
+				9F01A449306A1B2800A18A16 /* DequeModule */,
+				9F01A44F306A1B9B00A18A16 /* Dependencies */,
+				9F01A452306A1BAE00A18A16 /* CasePaths */,
 			);
 			productName = "TmdbTCA-UIKit";
 			productReference = 9F30209730287AB300578C9B /* TmdbTCA-UIKit.app */;
@@ -301,6 +322,9 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				9F30212E30287BBA00578C9B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				9F01A44E306A1B9B00A18A16 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				9F01A451306A1BAE00A18A16 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9F30209830287AB300578C9B /* Products */;
@@ -697,6 +721,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		9F01A44E306A1B9B00A18A16 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.1;
+			};
+		};
+		9F01A451306A1BAE00A18A16 /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-case-paths";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.0;
+			};
+		};
 		9F30212E30287BBA00578C9B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -708,6 +756,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9F01A441306A1B2800A18A16 /* BasicContainers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BasicContainers;
+		};
+		9F01A443306A1B2800A18A16 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		9F01A445306A1B2800A18A16 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		9F01A447306A1B2800A18A16 /* ContainersPreview */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = ContainersPreview;
+		};
+		9F01A449306A1B2800A18A16 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A440306A1B2800A18A16 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		9F01A44F306A1B9B00A18A16 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A44E306A1B9B00A18A16 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		9F01A452306A1BAE00A18A16 /* CasePaths */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A451306A1BAE00A18A16 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
+			productName = CasePaths;
+		};
 		9F30212F30287BBA00578C9B /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9F30212E30287BBA00578C9B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

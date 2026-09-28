@@ -12,6 +12,10 @@
 		9F01A412306A125400A18A16 /* data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A410306A125400A18A16 /* data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F01A418306A12DA00A18A16 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A417306A12DA00A18A16 /* Alamofire */; };
 		9F01A41B306A12EE00A18A16 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A41A306A12EE00A18A16 /* SwiftyJSON */; };
+		9F01A424306A161500A18A16 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A423306A161500A18A16 /* ComposableArchitecture */; };
+		9F01A43E306A1A1900A18A16 /* domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A43D306A1A1900A18A16 /* domain.framework */; };
+		9F01A43F306A1A1900A18A16 /* domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F01A43D306A1A1900A18A16 /* domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F01A44D306A1B6C00A18A16 /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 9F01A44C306A1B6C00A18A16 /* Dependencies */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9F01A43F306A1A1900A18A16 /* domain.framework in Embed Frameworks */,
 				9F01A412306A125400A18A16 /* data.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -42,6 +47,7 @@
 		9F01A3DC306A11FC00A18A16 /* app_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = app_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F01A3E7306A11FC00A18A16 /* app_frameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = app_frameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F01A410306A125400A18A16 /* data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F01A43D306A1A1900A18A16 /* domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -64,6 +70,9 @@
 			files = (
 				9F01A41B306A12EE00A18A16 /* SwiftyJSON in Frameworks */,
 				9F01A411306A125400A18A16 /* data.framework in Frameworks */,
+				9F01A43E306A1A1900A18A16 /* domain.framework in Frameworks */,
+				9F01A44D306A1B6C00A18A16 /* Dependencies in Frameworks */,
+				9F01A424306A161500A18A16 /* ComposableArchitecture in Frameworks */,
 				9F01A418306A12DA00A18A16 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +110,7 @@
 		9F01A40F306A125400A18A16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F01A43D306A1A1900A18A16 /* domain.framework */,
 				9F01A410306A125400A18A16 /* data.framework */,
 			);
 			name = Frameworks;
@@ -140,6 +150,8 @@
 			packageProductDependencies = (
 				9F01A417306A12DA00A18A16 /* Alamofire */,
 				9F01A41A306A12EE00A18A16 /* SwiftyJSON */,
+				9F01A423306A161500A18A16 /* ComposableArchitecture */,
+				9F01A44C306A1B6C00A18A16 /* Dependencies */,
 			);
 			productName = app_framework;
 			productReference = 9F01A3DC306A11FC00A18A16 /* app_framework.framework */;
@@ -198,6 +210,8 @@
 			packageReferences = (
 				9F01A416306A12DA00A18A16 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9F01A419306A12EE00A18A16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				9F01A422306A161500A18A16 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				9F01A44B306A1B6C00A18A16 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9F01A3DD306A11FC00A18A16 /* Products */;
@@ -381,7 +395,7 @@
 		9F01A3F1306A11FC00A18A16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -413,7 +427,7 @@
 		9F01A3F2306A11FC00A18A16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -521,6 +535,22 @@
 				minimumVersion = 5.0.2;
 			};
 		};
+		9F01A422306A161500A18A16 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.26.2;
+			};
+		};
+		9F01A44B306A1B6C00A18A16 /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -533,6 +563,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F01A419306A12EE00A18A16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		9F01A423306A161500A18A16 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A422306A161500A18A16 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		9F01A44C306A1B6C00A18A16 /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F01A44B306A1B6C00A18A16 /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
