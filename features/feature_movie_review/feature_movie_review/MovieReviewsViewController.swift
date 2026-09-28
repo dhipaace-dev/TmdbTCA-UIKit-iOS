@@ -9,14 +9,14 @@ import ComposableArchitecture
 import UIKit
 import app_framework
 
-final class MovieReviewsViewController: UITableViewController {
+public final class MovieReviewsViewController: UITableViewController {
     private let store: StoreOf<MovieReviewsFeature>
     private var observationToken: ObservationToken?
     private let overlay = LoadingOverlayView()
     
     private var renderedCount = 0
     
-    init(store: StoreOf<MovieReviewsFeature>) {
+    public init(store: StoreOf<MovieReviewsFeature>) {
         self.store = store
         super.init(style: .plain)
     }
@@ -25,7 +25,7 @@ final class MovieReviewsViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Reviews"
         
@@ -46,7 +46,7 @@ final class MovieReviewsViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.send(.onAppear)
     }
@@ -68,11 +68,11 @@ final class MovieReviewsViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         store.reviews.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ReviewCell.reuseIdentifier, for: indexPath) as! ReviewCell
         
         cell.configure(with: store.reviews[indexPath.row])
@@ -80,7 +80,7 @@ final class MovieReviewsViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         store.send(.loadMoreIfNeeded(currentReview: store.reviews[indexPath.row]))
     }

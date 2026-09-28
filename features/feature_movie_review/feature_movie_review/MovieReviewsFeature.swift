@@ -11,22 +11,24 @@ import domain
 import app_framework
 
 @Reducer
-struct MovieReviewsFeature {
+public struct MovieReviewsFeature {
+    
+    public init() {}
     
     @ObservableState
-    struct State: Equatable {
+    public struct State: Equatable {
         let movieId: Int
         var reviews: [Review] = []
         var page = 0
         var isLoading: Bool = false
         var errorMessage: String?
         
-        init(movieId: Int) {
+        public init(movieId: Int) {
             self.movieId = movieId
         }
     }
     
-    enum Action {
+    public enum Action {
         case onAppear
         case loadMoreIfNeeded(currentReview: Review)
         case reviewsResponse(nextPage: Int, Result<ReviewModel, AppError>)
@@ -34,7 +36,7 @@ struct MovieReviewsFeature {
     
     @Dependency(\.getMovieReviewUseCase) var getMovieReviewUseCase
     
-    var body: some ReducerOf<Self> {
+    public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .onAppear:

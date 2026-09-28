@@ -10,6 +10,7 @@ import UIKit
 import feature_genre
 import feature_movie_by_genre
 import feature_movie_details
+import feature_movie_review
 
 final class AppCoordinator: UINavigationController, UINavigationControllerDelegate {
     private let store: StoreOf<AppFeature>
